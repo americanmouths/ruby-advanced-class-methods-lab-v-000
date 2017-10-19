@@ -49,8 +49,6 @@ class Song
       data = artist.delete(".mp3")
       artist = self.new
       artist_name
-      binding.pry
-
 
     end
   end
