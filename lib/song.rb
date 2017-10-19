@@ -49,7 +49,7 @@ class Song
       data = artist.delete(".mp3")
       song = self.new
       
-      
+
     end
   end
 
