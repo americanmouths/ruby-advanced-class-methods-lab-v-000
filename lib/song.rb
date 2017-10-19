@@ -46,11 +46,16 @@ class Song
   def self.new_from_filename(filename)
     file_name = filename.split(" - ")
     artist_name = file_name.collect do |artist|
-      artist.delete(".mp3")
+      data = artist.delete(".mp3")
+      name = data[0]
+      artist_name = data[1]
+      
       artist = self.new
-      artist[0] = @artist_name
-      artist[1] = @name
+      artist.name = name
+      artist.artist_name = data[1]
+      artist
     end
+      artist_name
   end
 
 
