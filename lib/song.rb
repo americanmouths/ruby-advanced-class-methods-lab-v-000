@@ -48,8 +48,6 @@ class Song
     artist_name = file_name.collect do |artist|
       data = artist.delete(".mp3")
       name = data[1]
-      artist_name = data[0]
-      song = self.new
     end
   end
 
