@@ -47,9 +47,9 @@ class Song
     file_name = filename.split(" - ")
     artist_name = file_name.collect do |artist|
       data = artist.delete(".mp3")
-      artist = self.new
-      person.name = data
-      person
+      song = self.new
+      binding.pry
+      
     end
   end
 
