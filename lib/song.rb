@@ -45,17 +45,13 @@ class Song
 
   def self.new_from_filename(filename)
     file_name = filename.split(" - ")
-    artist_name = file_name.collect do |artist|
-      data = artist.delete(".mp3")
-      name = data[0]
-      artist_name = data[1]
+    artist_name = file_name[0]
+    song_name = file_name[1].gsub(".mp3", "")
 
-      artist = self.new
-      artist.name = name
-      artist.artist_name = data[1]
-      artist
-    end
-      artist_name
+      song = self.new
+      song.name = song_name
+      song.artist_name = artist_name
+      song
   end
 
 
