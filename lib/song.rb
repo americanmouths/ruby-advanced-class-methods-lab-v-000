@@ -48,6 +48,7 @@ class Song
     artist_name = file_name.collect do |artist|
       data = artist.delete(".mp3")
       data
+      binding.pry
 
     end
   end
